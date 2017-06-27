@@ -20,14 +20,22 @@ The script downloads and uses following packages:
 Driver.py
 ---------
 This script takes input in form of a config file (`config.txt`) which defines following parameters: 
+
 Line 1 : *Threads* (INT)Number of concurrent threads to use
+
 Line 2 : *Read type* (paired or unpaired) *Dummy field*
+
 Line 3 : *Direction* (RF or FR)
+
 This are non-functional
+
 Line 4 : *Front clipping* (INT)
+
 Line 5 : *Reverse clipping* (INT)
+
 Line 6 : *File path of reads* from line 6 onward. 
-`Driver.py` is designed for paired end reads, and thus the read path should be in format : `./reads/prefix` and naming convention of paired reads should be :  `prefix_1.fastq.gz` and `prefix_2.fastq.gz`
+`Driver.py` is designed for paired end reads, and thus the read path should be in format : `./reads/prefix` and naming convention of paired 
+reads should be :  `prefix_1.fastq.gz` and `prefix_2.fastq.gz`
 
 This is how a sample work directory would look like. `reference` folder should store the reference genome with same format as mentioned below, and should also include the `mrrna.fasta` which contains ribosomal RNA sequences which will be filtered out from raw reads. 
 
