@@ -1,0 +1,10 @@
+7
+Paired
+RF
+13
+0
+./reads/ERR435936
+./reads/ERR435937
+./reads/ERR435938
+./reads/ERR435939
+./reads/ERR435940
