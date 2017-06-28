@@ -69,11 +69,13 @@ strand = 2
 #	subprocess.call(['curl', i, '--output' , name])
 #----------------------------------------------------------------------------#
 
-#Generate data for plots######################################################																								
-subprocess.call(['./FastQC/fastqc', '--threads', '7', './reads/*.fastq.gz'])#						
-subprocess.call(['Rscript','preqc.r'])#										
+#Generate data for plots######################################################	
+for i in reads:																	#
+	path1 = i + "_1.fastq.gz"													#
+	path2 = i + "_2.fastq.gz"													#
+	subprocess.call(['./FastQC/fastqc', '--threads', '7', path1, path2])		#																													
+subprocess.call(['Rscript','preqc.r'])											#										
 #----------------------------------------------------------------------------#
-
 
 #BBDUK IT!!!##################################################################
 #Values defined for forward and reserve trim will be used#####################
