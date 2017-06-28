@@ -176,5 +176,5 @@ for i in reads:
 	strand = 2
 	alignmentbam = "./alignment/" + i.split('/')[-1] + ".bam"
 	countfile = './counts/' + i.split('/')[-1] + '_count.txt'
-	subprocess.call(['./subread/bin/featureCounts', '-T', threads, 's', strand,'-p', '-t', 'exon', '-g', 'gene_id', '-a', './annotation/gencode.vM14.annotation.gtf', '-R', '-o', countfile, alignmentbam])
+	subprocess.call(['./subread/bin/featureCounts', '-T', threads, '-s', strand,'-p', '-t', 'exon', '-g', 'gene_id', '-a', './annotation/gencode.vM14.annotation.gtf', '-R', '-o', countfile, alignmentbam])
 #----------------------------------------------------------------------------#
