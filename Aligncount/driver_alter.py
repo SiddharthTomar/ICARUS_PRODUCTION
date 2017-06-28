@@ -50,7 +50,7 @@ readtype = content [1]
 #direction = content [2]
 direction = "RF"
 #clippingF = content [3]
-clippingF = 13
+clippingF = "13"
 clippingR = content [4]
 reads = content [5:]
 strand = 2
@@ -69,9 +69,8 @@ strand = 2
 #	subprocess.call(['curl', i, '--output' , name])
 #----------------------------------------------------------------------------#
 
-#Generate data for plots######################################################
-path = "./reads/*.fastq.gz"#																								
-subprocess.call(['./FastQC/fastqc', '--threads', '7', path])#						
+#Generate data for plots######################################################																								
+subprocess.call(['./FastQC/fastqc', '--threads', '7', './reads/*.fastq.gz'])#						
 subprocess.call(['Rscript','preqc.r'])#										
 #----------------------------------------------------------------------------#
 
